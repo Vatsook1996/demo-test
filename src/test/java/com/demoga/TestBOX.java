@@ -9,14 +9,16 @@ import static com.codeborne.selenide.Selenide.open;
 public class TestBOX {
 
     @BeforeAll
-    static void beforeALL() {
+    static void cuccessfulFillFormTest() {
         Configuration.holdBrowserOpen = true;
-        Configuration.baseUrl= "https://demoqa.com/automation-practice-form";
+        Configuration.baseUrl = "https://demoqa.com/automation-practice-form";
+        Configuration.browserSize="1920x1920";
     }
 
 
     @Test
     void successfullFormTest() {
-        open("demoqa.com/automation-practice-form");
+        open("");
     }
 }
+
