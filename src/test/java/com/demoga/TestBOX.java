@@ -1,24 +1,30 @@
 package com.demoga;
 
-import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeAll;
 
+import static com.codeborne.selenide.Selenide.executeJavaScript;
 import static com.codeborne.selenide.Selenide.open;
 
-public class TestBOX {
-
-    @BeforeAll
-    static void cuccessfulFillFormTest() {
-        Configuration.holdBrowserOpen = true;
-        Configuration.baseUrl = "https://demoqa.com/automation-practice-form";
-        Configuration.browserSize="1920x1920";
-    }
-
-
+public class TestBOX extends TestBase {
     @Test
-    void successfullFormTest() {
-        open("");
+    void fullTestBOX() {
+        String firstName = "Rinat",
+                lastName = "Akhmetdiyanov",
+                email = "ahmetdianov@mail.ru",
+                gender = "Male",
+                phoneNumber = "9164077263",
+                birthMonth = "April",
+                birthYear = "1996",
+                birthDay = "21",
+                subjects = "Biology",
+                hobbies = "Sports",
+                picturePath = "images/image.png",
+                pictureName = "image.png",
+                address = "Moscow, ul Lenino, d 1, kv 11",
+                state = "NCR",
+                city = "Noida";
+        open("/automation-practice-form");
+        executeJavaScript("$('footer').remove()");
+        executeJavaScript("$('#fixedban').remove()");
     }
 }
-
