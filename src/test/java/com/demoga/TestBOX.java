@@ -25,8 +25,8 @@ public class TestBOX extends TestBase {
                 picturePath = "P-75.png",
                 pictureName = "P-75.png",
                 address = "Moscow",
-                state = "NCR",
-                city = "Noida";
+                state = "Rajasthan",
+                city = "Jaiselmer";
 
         open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
