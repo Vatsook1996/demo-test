@@ -1,0 +1,15 @@
+package com.demoga;
+
+import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeAll;
+
+public class TestBase {
+
+    @BeforeAll
+    static void beforeALL() {
+        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = "https://demoqa.com/automation-practice-form";
+
+    }
+
+}
