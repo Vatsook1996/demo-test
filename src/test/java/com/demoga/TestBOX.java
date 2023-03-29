@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -48,8 +49,22 @@ public class TestBOX extends TestBase {
         $(byText("Rajasthan")).click();
         $("#city").click();
         $(byText("Jaiselmer")).click();
+        $("#submit").click();
+
+        $(".table").shouldHave(
+                text("Ivanov Ivan"),
+                text("Ivan@mail.com"),
+                text("Male"),
+                text("9000000000"),
+                text("21 April,1996"),
+                text("English"),
+                text("Sports"),
+                text("P-75.png"),
+                text("Moscow"),
+                text("Rajasthan Jaiselmer")
 
 
+        );
 
 
     }
