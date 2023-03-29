@@ -7,9 +7,9 @@ public class TestBase {
 
     @BeforeAll
     static void beforeALL() {
+        Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://demoqa.com/automation-practice-form";
-
+        Configuration.holdBrowserOpen = true;
     }
 
 }
