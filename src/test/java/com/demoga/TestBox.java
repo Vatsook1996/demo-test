@@ -8,25 +8,12 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class TestBOX extends TestBase {
+public class TestBox extends TestBase {
     @Test
-    void fullTestBOX() {
+    void fullTestBox() {
 
-        String firstName = "Ivanov",
-                lastName = "Ivan",
-                email = "Ivan@mail.com",
-                gender = "Male",
-                phoneNumber = "9000000000",
-                birthMonth = "April",
-                birthYear = "1996",
-                birthDay = "21",
-                subjects = "English",
-                hobbies = "Sports",
-                picturePath = "P-75.png",
-                pictureName = "P-75.png",
-                address = "Moscow",
-                state = "Rajasthan",
-                city = "Jaiselmer";
+        String birthDay = "21";
+
 
         open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
